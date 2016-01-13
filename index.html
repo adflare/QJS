@@ -17,6 +17,9 @@
             $("#errcn").html(details.client);
             $("#errn").html(details.clientV);
             $("#errst").html(details.status);
+            $("#errip").html(details.clientIP);
+            var dt = new Date(details.timestamp);
+            $("#errts").html(dt.toLocaleString());
             if (q.config.debugMode == 0) {
                 $('#octoLogger').show(0).delay(5000).hide(0);
             }else {
@@ -36,6 +39,10 @@
         <hr>
         <p>Browser: <span class="text-info" id="errcn"></span></p>
         <p>Browser Version: <span class="text-info" id="errn"></span></p>
+
+        <p>Client IP: <span class="text-info" id="errip"></span></p>
+
+        <p>Report timestamp: <span class="text-info" id="errts"></span></p>
         <p>Report state: <span class="text-info" id="errst"></span></p>
     </div>
 

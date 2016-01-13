@@ -234,13 +234,25 @@ var q = function () {
             return temp.toLowerCase();
         }
     }, {
+        key: "_callAjax",
+        value: function _callAjax(url, method, callback) {
+            var xmlhttp = undefined;
+            // compatible with IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    callback(xmlhttp.responseText);
+                }
+            };
+            xmlhttp.open(method, url, true);
+            xmlhttp.send();
+        }
+    }, {
         key: "_check",
         value: function _check() {
             var chost = window.location.hostname;
             var vx = this._md5(this._md5(chost));
             var vy = this._md5(this.config.appId);
-            console.log("chost: " + vx);
-            console.log("shost: " + vy);
             if (vy == vx) {
                 return true;
             } else {
@@ -310,6 +322,16 @@ var q = function () {
             return ci;
         }
     }, {
+        key: "_getIp",
+        value: function _getIp() {
+            var rStr = "http://jsonip.com/";
+            this._callAjax(rStr, "GET", function (res) {
+                var pRes = JSON.parse(res);
+                var IP = pRes.ip;
+                return IP;
+            });
+        }
+    }, {
         key: "_errExists",
         value: function _errExists(errID) {
             //This function must send server request with _md5 of details
@@ -348,13 +370,17 @@ var q = function () {
                 return 0;
             };
             var client = this._getBrowser();
+            var now = new Date();
+            var cliIp = this._getIp();
             var details = {
+                'timestamp': now,
                 'msg': msg,
                 'url': url,
                 'line': linenumber,
                 'stack': _error.stack,
                 'client': client[0],
                 'clientV': client[1],
+                'clientIP': cliIp,
                 'status': 'pending'
             };
             var status = this._errQuery(details);

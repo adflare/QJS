@@ -4,14 +4,14 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var q = function () {
-    function q(config) {
-        _classCallCheck(this, q);
+var x = function () {
+    function x(config) {
+        _classCallCheck(this, x);
 
         this.config = config;
     }
 
-    _createClass(q, [{
+    _createClass(x, [{
         key: "_md5",
         value: function _md5(string) {
 
@@ -337,7 +337,7 @@ var q = function () {
             //This function must send server request with _md5 of details
             //Return true if exists [server must update err counter in DB]
             //Return false if not exists
-            //errID = q._md5(details);
+            //errID = x._md5(details);
             //----------------------------
             //Method: Database already have errID field. Need to check DB for record with this errID, if it
             //exists, need to update record to increase counter and add browser.
@@ -382,9 +382,14 @@ var q = function () {
                 'clientV': client[1],
                 'status': 'pending'
             };
-            var status = this._errQuery(details);
-            details.status = status;
-            return details;
+            if (this.config.debugMode == false) {
+                var status = this._errQuery(details);
+                details.status = status;
+                return details;
+            } else {
+                console.log(JSON.stringify(details));
+                return details;
+            }
         }
     }, {
         key: "event",
@@ -397,7 +402,7 @@ var q = function () {
         }
     }]);
 
-    return q;
+    return x;
 }();
 
-//# sourceMappingURL=q-compiled.js.map
+//# sourceMappingURL=x-compiled.js.map

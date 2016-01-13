@@ -1,3 +1,18 @@
+#login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 50%;
+  width: 25%;
+}
+
+#login #login-head {
+  background: lightskyblue;
+}
+
 #octoLogger {
   display: none;
   z-index: 9999;

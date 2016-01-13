@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="css/app.css">
     <link href='https://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic' rel='stylesheet'
           type='text/css'>
-    <script src="js/q-compiled.js"></script>
+    <script src="js/x-compiled.js"></script>
     <script>
         window.known = [];
         function err() {
             parsez(8);
         }
-        window.q = new q({'debugMode': 0, 'appId': '421aa90e079fa326b6494f812ad13e79'});
+        window.x = new x({'debugMode': 0, 'appId': '421aa90e079fa326b6494f812ad13e79'});
         window.onerror = function(msg, url, linenumber, col, error) {
-            var details = q.error(msg, url, linenumber, col, error);
+            var details = x.error(msg, url, linenumber, col, error);
             var exist = false;
             if ($.inArray(details.id.toString(), window.known) > -1) {
                 window.known.push(details.id.toString());
@@ -32,7 +32,7 @@
             $("#errst").html(details.status);
             var dt = new Date(details.timestamp);
             $("#errts").html(dt.toLocaleString());
-            if (q.config.debugMode == 0) {
+            if (x.config.debugMode == 0) {
                 $('#octoLogger').show(0).delay(2000).hide(0);
             }else {
                 $('#octoLogger').show(0);

@@ -1,4 +1,4 @@
-class q {
+class x {
     constructor(config) {
         this.config = config;
     }
@@ -303,7 +303,7 @@ class q {
         //This function must send server request with _md5 of details
         //Return true if exists [server must update err counter in DB]
         //Return false if not exists
-        //errID = q._md5(details);
+        //errID = x._md5(details);
         //----------------------------
         //Method: Database already have errID field. Need to check DB for record with this errID, if it
         //exists, need to update record to increase counter and add browser.
@@ -345,9 +345,14 @@ class q {
             'clientV': client[1],
             'status': 'pending'
         };
-        let status = this._errQuery(details);
-        details.status = status;
-        return details;
+        if (this.config.debugMode == false) {
+            let status = this._errQuery(details);
+            details.status = status;
+            return details;
+        } else {
+            console.log(JSON.stringify(details));
+            return details;
+        }
     }
     event(name, ...args) {
         console.log("QJS -> Record event hook: " + name + " with args: " + args);

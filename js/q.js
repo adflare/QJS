@@ -224,6 +224,15 @@ class q {
             return false;
         };
     }
+
+    __makeId(details) {
+        let errData = {
+            'msg': details.msg,
+            'url': details.url
+        };
+        let errID = this._md5(JSON.stringify(errData));
+        return errID;
+    }
     _getBrowser() {
         var nVer = navigator.appVersion;
         var nAgt = navigator.userAgent;
@@ -302,12 +311,7 @@ class q {
         return srvRes;
     }
     _errQuery (details) {
-        let errData = {
-            'msg': details.msg,
-            'url': details.url,
-            'line': details.line,
-        };
-        let errID = this._md5(errData);
+        let errID = this.__makeId(details);
         if (this._errExists(errID) == true) {
             //Error already known
         }else {
@@ -324,9 +328,15 @@ class q {
             return 0;
         };
         let client = this._getBrowser();
+        let id = this.__makeId({
+            'msg': msg,
+            'url': url,
+            'line': linenumber
+        });
         let now = new Date();
         let details = {
             'timestamp': now,
+            'id': id,
             'msg': msg,
             'url': url,
             'line': linenumber,

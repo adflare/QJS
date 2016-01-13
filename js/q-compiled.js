@@ -260,6 +260,16 @@ var q = function () {
             };
         }
     }, {
+        key: "__makeId",
+        value: function __makeId(details) {
+            var errData = {
+                'msg': details.msg,
+                'url': details.url
+            };
+            var errID = this._md5(JSON.stringify(errData));
+            return errID;
+        }
+    }, {
         key: "_getBrowser",
         value: function _getBrowser() {
             var nVer = navigator.appVersion;
@@ -337,12 +347,7 @@ var q = function () {
     }, {
         key: "_errQuery",
         value: function _errQuery(details) {
-            var errData = {
-                'msg': details.msg,
-                'url': details.url,
-                'line': details.line
-            };
-            var errID = this._md5(errData);
+            var errID = this.__makeId(details);
             if (this._errExists(errID) == true) {
                 //Error already known
             } else {
@@ -360,9 +365,15 @@ var q = function () {
                 return 0;
             };
             var client = this._getBrowser();
+            var id = this.__makeId({
+                'msg': msg,
+                'url': url,
+                'line': linenumber
+            });
             var now = new Date();
             var details = {
                 'timestamp': now,
+                'id': id,
                 'msg': msg,
                 'url': url,
                 'line': linenumber,

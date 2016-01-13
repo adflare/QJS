@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/app.css">
     <script src="js/q-compiled.js"></script>
     <script>
-        window.q = new q({ 'debugMode': 1, 'appId': '421aa90e079fa326b6494f812ad13e79' });
+        window.q = new q({'debugMode': 0, 'appId': '421aa90e079fa326b6494f812ad13e79'});
         window.onerror = function(msg, url, linenumber, col, error) {
             var details = q.error(msg, url, linenumber, col, error);
             $("#errcode").html(details.stack);
@@ -24,11 +24,34 @@
             }else {
                 $('#octoLogger').show(0);
             }
+            ;
+            var writer = "<tr>" +
+                    "<td>" + dt.toLocaleString() + "</td>" +
+                    "<td>" + details.id + "</td>" +
+                    "<td>" + details.msg + "</td>" +
+                    "<td><pre>" + details.stack + "</pre></td>" +
+                    "<td>" + "Browser: " + details.client + "<br>" + "Version: " + details.clientV + "</td>" +
+                    "</tr>";
+            $('#errors tr:last').after(writer);
         }
     </script>
 </head>
 <body>
 <div class="container-fluid">
+
+    <div class="row" id="errlist">
+        <div class="col-sm-12 table-responsive">
+            <table id="errors" class="table table-sm table-bordered">
+                <tr class="bg-info text-sm-center">
+                    <td>Timestamp</td>
+                    <td>ErrorID</td>
+                    <td>Message</td>
+                    <td>Stack</td>
+                    <td>Client Info</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
     <div class="alert alert-warning" id="octoLogger">
         <p>Error: <span class="text-info" id="errmsg"></span></p>
@@ -45,5 +68,8 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+    parseint(a);
+</script>
 </body>
 </html>

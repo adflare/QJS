@@ -88,7 +88,7 @@ class q {
         };
 
         function Utf8Encode(string) {
-            string = string.replace(/\r\n/g,"\n");
+            string = string.toString().replace(/\r\n/g, "\n");
             var utftext = "";
 
             for (var n = 0; n < string.length; n++) {
@@ -298,11 +298,12 @@ class q {
             'line': details.line,
         };
         let errID = this._md5(errData);
-        if (this.errExists(errID) == true) {
+        if (this._errExists(errID) == true) {
             //Error already known
         }else {
             //Send it to server
             return "OK";
+            //At this time
         }
 
     }

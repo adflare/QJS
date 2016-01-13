@@ -2,13 +2,83 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/node_modules/request/lib/auth-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/def/esprima-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-preset-es2015/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-helper-get-function-arity/lib/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/def/babel-compiled.js" />
         <item url="file://$PROJECT_DIR$/js/q-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/lib/equiv-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/def/fb-harmony-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/lib/scope-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/lib/path-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/request/lib/auth-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/lib/types-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/lib/shared-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/lib/node-path-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/emit-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/lib/path-visitor-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-unicode-regex/lib/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-helper-regex/lib/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-object-super/lib/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/main-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/leap-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/util-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/meta-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/hoist-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/visit-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-strict-mode/lib/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/src/visit-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-spread/lib/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/jsesc/jsesc-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/src/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-sticky-regex/lib/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/jsesc/bin/jsesc-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/def/e4x-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/def/es7-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/def/es6-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/def/core-compiled.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/ast-types/def/mozilla-compiled.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/node_modules/request/lib/auth-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/def/esprima-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-preset-es2015/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-helper-get-function-arity/lib/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/def/babel-compiled.js" />
       <root url="file://$PROJECT_DIR$/js/q-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/lib/equiv-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/def/fb-harmony-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/lib/scope-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/lib/path-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/request/lib/auth-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/lib/types-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/lib/shared-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/lib/node-path-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/emit-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/lib/path-visitor-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-unicode-regex/lib/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-helper-regex/lib/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-object-super/lib/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/main-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/leap-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/util-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/meta-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/hoist-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/lib/visit-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-strict-mode/lib/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/src/visit-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-spread/lib/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/jsesc/jsesc-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-regenerator/src/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/babel-plugin-transform-es2015-sticky-regex/lib/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/jsesc/bin/jsesc-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/def/e4x-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/def/es7-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/def/es6-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/def/core-compiled.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/ast-types/def/mozilla-compiled.js" />
     </CLASSES>
     <SOURCES />
   </library>

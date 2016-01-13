@@ -1,0 +1,62 @@
+#octoLogger {
+  display: none;
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+
+.hd, .price {
+  background-image: -webkit-linear-gradient(left, #73a5c3, #6875be);
+  background-image: linear-gradient(90deg, #73a5c3 0, #6875be);
+  background-repeat: repeat-x;
+  color: white;
+  padding-bottom: 3em; }
+
+.btn-hd {
+  border-color: white;
+  color: white;
+  margin: 1em; }
+  .btn-hd:hover {
+    border-color: orangered;
+    color: orangered; }
+
+.price {
+  padding-top: 3em; }
+
+.lg {
+  font-size: larger; }
+
+.rb {
+  border-right: 1px solid white; }
+
+.lb {
+  border-left: 1px solid white; }
+
+.rbb-x {
+  border-right: 1px solid #73a5c3; }
+
+.lbb-x {
+  border-left: 1px solid #73a5c3; }
+
+.rbb {
+  border-right: 1px solid black; }
+
+.lbb {
+  border-left: 1px solid black; }
+
+.bbb {
+  border-bottom: 1px solid black; }
+
+.std {
+  padding-top: 3em;
+  padding-bottom: 3em; }
+
+.nowrap p {
+  display: inline; }
+
+#proc .col-sm-2 {
+  height: 10em;
+  color: #6875be; }
+
+/*# sourceMappingURL=app.css.map */

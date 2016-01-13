@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/q-compiled.js"></script>
+    <script>
+        window.q = new q({ 'debugMode': 1, 'appId': '421aa90e079fa326b6494f812ad13e79' });
+        window.onerror = function(msg, url, linenumber, col, error) {
+            var details = q.error(msg, url, linenumber, col, error);
+            $("#errcode").html(details.stack);
+            $('#errmsg').html(details.msg);
+            $('#errurl').html(details.url);
+            $('#errline').html(details.line);
+            $("#errcn").html(details.client);
+            $("#errn").html(details.clientV);
+            $("#errst").html(details.status);
+            if (q.config.debugMode == 0) {
+                $('#octoLogger').show(0).delay(5000).hide(0);
+            }else {
+                $('#octoLogger').show(0);
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+
+    <div class="alert alert-warning" id="octoLogger">
+        <p>Error: <span class="text-info" id="errmsg"></span></p>
+        <p>URL: <span class="text-info" id="errurl"></span></p>
+        <p>Line: <span class="text-info" id="errline"></span></p>
+        <pre id="errcode"></pre>
+        <hr>
+        <p>Browser: <span class="text-info" id="errcn"></span></p>
+        <p>Browser Version: <span class="text-info" id="errn"></span></p>
+        <p>Report state: <span class="text-info" id="errst"></span></p>
+    </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

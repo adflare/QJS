@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/node_modules/request/lib/auth-compiled.js" />
+        <item url="file://$PROJECT_DIR$/js/q-compiled.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/node_modules/request/lib/auth-compiled.js" />
+      <root url="file://$PROJECT_DIR$/js/q-compiled.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

@@ -322,16 +322,6 @@ var q = function () {
             return ci;
         }
     }, {
-        key: "_getIp",
-        value: function _getIp() {
-            var rStr = "http://jsonip.com/";
-            this._callAjax(rStr, "GET", function (res) {
-                var pRes = JSON.parse(res);
-                var IP = pRes.ip;
-                return IP;
-            });
-        }
-    }, {
         key: "_errExists",
         value: function _errExists(errID) {
             //This function must send server request with _md5 of details
@@ -371,7 +361,6 @@ var q = function () {
             };
             var client = this._getBrowser();
             var now = new Date();
-            var cliIp = this._getIp();
             var details = {
                 'timestamp': now,
                 'msg': msg,
@@ -380,7 +369,6 @@ var q = function () {
                 'stack': _error.stack,
                 'client': client[0],
                 'clientV': client[1],
-                'clientIP': cliIp,
                 'status': 'pending'
             };
             var status = this._errQuery(details);

@@ -202,7 +202,6 @@ class q {
 
         return temp.toLowerCase();
     }
-
     _callAjax(url, method, callback) {
         let xmlhttp;
         // compatible with IE7+, Firefox, Chrome, Opera, Safari
@@ -291,16 +290,6 @@ class q {
         var ci = [browserName, fullVersion];
         return ci;
     }
-
-    _getIp() {
-        let rStr = "http://jsonip.com/";
-        this._callAjax(rStr, "GET", function (res) {
-            let pRes = JSON.parse(res);
-            let IP = pRes.ip;
-            return IP;
-        })
-
-    }
     _errExists(errID) {
         //This function must send server request with _md5 of details
         //Return true if exists [server must update err counter in DB]
@@ -336,7 +325,6 @@ class q {
         };
         let client = this._getBrowser();
         let now = new Date();
-        let cliIp = this._getIp();
         let details = {
             'timestamp': now,
             'msg': msg,
@@ -345,7 +333,6 @@ class q {
             'stack': error.stack,
             'client': client[0],
             'clientV': client[1],
-            'clientIP': cliIp,
             'status': 'pending'
         };
         let status = this._errQuery(details);
